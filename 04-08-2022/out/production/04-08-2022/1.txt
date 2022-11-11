@@ -1,0 +1,17 @@
+private static int binarySearch(int[] array, int item) {
+        int low = 0;                    // нижняя граница поиска
+        int high = array.length - 1;    // верхняя граница поиска
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            int guess = array[mid];
+            if (guess == item) {        // элемент найден
+                return mid;
+            }
+            if (guess > item) {         // "Много"
+                high = mid - 1;
+            } else {
+                low = mid + 1;          // "Мало"
+            }
+        }
+        return -1;
+    }
