@@ -6,7 +6,7 @@ import java.util.List;
 //Converting numbers from one number system to another
 public class CalcSystem {
     public static void main(String[] args) {
-        System.out.println(getInRadix(321654, 2));
+        System.out.println(getInRadix(32, 2));
     }
     //Таблица символов
     private static List<Character> getDigitTable() {
